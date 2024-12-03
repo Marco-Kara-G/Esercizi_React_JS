@@ -1,12 +1,10 @@
-import { useState } from "react";
 import "./App.css";
-
+import RandomMessage from "./components/Random_Message";
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <h1>HELLO WORLD</h1>
+      <RandomMessage />
     </>
   );
 }
