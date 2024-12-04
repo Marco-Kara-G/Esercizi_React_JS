@@ -1,10 +1,12 @@
 import "./App.css";
-import RandomMessage from "./components/Random_Message";
+import { Change } from "./components/Change";
+import { List } from "./components/list";
 function App() {
   return (
     <>
       <h1>HELLO WORLD</h1>
-      <RandomMessage />
+      <List />
+      <Change />
     </>
   );
 }
