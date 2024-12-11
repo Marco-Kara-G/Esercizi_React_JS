@@ -1,16 +1,19 @@
+import { useState } from "react";
 import { useEffect } from "react";
 
 export function Clock() {
-  const time = new Date();
+  const [date, setDate] = useState(new Date());
 
   useEffect(() => {
-    setInterval(() => {}, 1000);
+    console.log("updating date...");
+
+    setDate(new Date());
   });
 
   return (
     <>
       <div>
-        <h2>{time.toLocaleTimeString}</h2>
+        <h2>Orario: {date.toLocaleTimeString()}</h2>
       </div>
     </>
   );

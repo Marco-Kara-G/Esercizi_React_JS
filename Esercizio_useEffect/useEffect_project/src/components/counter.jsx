@@ -5,7 +5,7 @@ export function Counter(props) {
   const [counter, setCounter] = useState(props.initialvalue);
 
   function incrementCounter() {
-    setCounter(counter + incrementValue);
+    setCounter(counter + props.incrementValue);
   }
 
   useEffect(() => {
@@ -15,6 +15,7 @@ export function Counter(props) {
   return (
     <>
       <div>
+        <p>Click: {counter}</p>
         <button onClick={incrementCounter}>
           Premi per aumentare il contatore
         </button>
