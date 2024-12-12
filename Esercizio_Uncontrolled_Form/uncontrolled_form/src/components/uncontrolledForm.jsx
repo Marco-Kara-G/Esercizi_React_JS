@@ -1,22 +1,20 @@
-export function UncontrolledForom() {
-  const handleForm = (event) => {
+export function UncontrolledLogin() {
+  const onLogin = (event) => {
     event.preventDefault();
 
-    const userName = event.target.elements.namedItem("username").value;
-    const passWord = event.target.elements.namedItem("password").value;
-    const checkBox = event.target.elements.namedItem("checkbox").checked;
+    const formData = new FormData(event.target);
 
     const data = {
-      userName,
-      passWord,
-      checkBox,
+      userName: formData.get("username"),
+      passWord: formData.get("password"),
+      checkBox: formData.get("checkbox") === "on" ? true : false,
     };
 
     console.log(data);
   };
   return (
     <div>
-      <form onSubmit={handleForm}>
+      <form onSubmit={onLogin}>
         <h1>My uncontrolled form</h1>
         <input
           type="text"

@@ -1,10 +1,10 @@
 import "./App.css";
-import { UncontrolledForom } from "./components/uncontrolledForm";
+import { UncontrolledLogin } from "./components/uncontrolledForm";
 
 function App() {
   return (
     <>
-      <UncontrolledForom />
+      <UncontrolledLogin />
     </>
   );
 }
