@@ -31,7 +31,7 @@ export function GithubUser({ username }) {
 
   return (
     <div>
-      {loading && <p>Caricamento dati in corso...</p>}
+      {loading && <p>Caricamento dati in corso...Attendi...</p>}
       {error && <p>{error}</p>}
       {user && (
         <div>
