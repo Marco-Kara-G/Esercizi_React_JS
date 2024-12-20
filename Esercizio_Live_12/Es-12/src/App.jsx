@@ -1,14 +1,17 @@
 import "./App.css";
-import { UserProvvider } from "./components/usercontext";
-import { Registrazione } from "./components/Register";
-import { Login } from "./components/login";
+import { FakeDatabase } from "./components/fakeDatabase";
+import { LogIn } from "./components/login";
+import { SignIn } from "./components/SignIn";
 
 function App() {
   return (
-    <UserProvvider>
-      <Registrazione />
-      <Login />
-    </UserProvvider>
+    <div>
+      <SignIn />
+      <hr />
+      <LogIn />
+      <hr />
+      <FakeDatabase />
+    </div>
   );
 }
 
